@@ -17,7 +17,7 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with Yaaic.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 package org.yaaic.view;
 
 import org.yaaic.adapter.MessageListAdapter;
@@ -38,7 +38,7 @@ import android.widget.ListView;
 public class MessageListView extends ListView
 {
     private boolean delegate = true;
-    private View parent;
+    private final View parent;
     private int parentWidth;
     private int parentHeight;
     
@@ -95,7 +95,7 @@ public class MessageListView extends ListView
             parentHeight = parent.getHeight();
             
             this.setLayoutParams(new Gallery.LayoutParams(
-                parent.getWidth() / 100 * 85,
+                parent.getWidth(),
                 parent.getHeight()
             ));
         }
@@ -109,6 +109,7 @@ public class MessageListView extends ListView
      * 
      * @return The MessageListAdapter
      */
+    @Override
     public MessageListAdapter getAdapter()
     {
         return (MessageListAdapter) super.getAdapter();
