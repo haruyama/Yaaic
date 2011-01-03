@@ -469,7 +469,7 @@ public class IRCConnection extends PircBot
         notice = Colors.removeFormattingAndColors(notice);
 
         // Post notice to currently selected conversation
-        Conversation conversation = server.getConversation(server.getSelectedConversation());
+        Conversation conversation = server.getConversation(target);
 
         if (conversation == null) {
             // Fallback: Use ServerInfo view
