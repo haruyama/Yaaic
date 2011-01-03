@@ -70,7 +70,7 @@ along with Yaaic.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:singleLine="true"
-            android:imeOptions="actionSend" />
+            android:imeOptions="actionNone" />
         <Button
             android:id="@+id/speech"
             android:layout_width="wrap_content"
